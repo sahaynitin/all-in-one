@@ -1,12 +1,12 @@
 class Translation(object):
     START_TEXT = """Thank You for using me.
 /help to know how to use me
-Source Code: https://github.com/SpEcHiDe/AnyDLBot
-© @AnyDLBot"""
+Source Code: https://github.com/Thwarikh/FmDL_Bot
+© @FmDL_Bot"""
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
     # UPGRADE_TEXT = "no one gonna help you 🤣🤣🤣🤣"
-    UPGRADE_TEXT = """@AnyDL_Bot Paid Plans
+    UPGRADE_TEXT = """@FmDL_Bot Paid Plans
 -------
 Plan: FREE
 Filesize limit: 0 MB
@@ -79,8 +79,8 @@ NOTE: After payment you must take screenshot of receipt and send to anyone of th
     SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:
 URL | filename | username | password"""
     NOYES_URL = "@GetPublicLinkBot URL detected. Please do not abuse the service!"
-    DOWNLOAD_START = "trying to download"
-    UPLOAD_START = "trying to upload"
+    DOWNLOAD_START = "trying to download ⚫️ 🔴 ⚪️ 🔵 "
+    UPLOAD_START = "trying to upload ⚫️ 🔴 ⚪️ 🔵"
     RCHD_BOT_API_LIMIT = "size greater than maximum allowed size (50MB). Neverthless, trying to upload."
     RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 1.5GB due to Telegram API limitations."
     AFTER_SUCCESSFUL_UPLOAD_MSG = "Please rate me if you find me useful. https://t.me/tlgrmcbot?start=anydl_bot-bot"

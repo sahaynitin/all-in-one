@@ -67,7 +67,7 @@ def get_link(bot, update):
             message_id=a.message_id
         )
         end_one = datetime.now()
-        if str(update.from_user.id) not in Config.G_DRIVE_AUTH_DRQ:
+        if str(update.from_user.id) in Config.G_DRIVE_AUTH_DRQ:
             gauth = Config.G_DRIVE_AUTH_DRQ[str(update.from_user.id)]
             # Create GoogleDrive instance with authenticated GoogleAuth instance.
             drive = GoogleDrive(gauth)

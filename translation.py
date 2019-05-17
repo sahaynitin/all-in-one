@@ -2,7 +2,7 @@ class Translation(object):
     START_TEXT = """Thank You for using me.
 /help to know how to use me
 Source Code: https://github.com/Thwarikh/FmDL_Bot
-<a href='https://t.me/FmDl_bot'>© FmDL_Bot</a>"""
+© FmDL_Bot"""
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
     #  UPGRADE_TEXT = "no one gonna help you 🤣🤣🤣🤣"

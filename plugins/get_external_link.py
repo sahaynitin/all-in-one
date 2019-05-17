@@ -34,7 +34,7 @@ from pydrive.drive import GoogleDrive
 @pyrogram.Client.on_message(pyrogram.Filters.command(["getlink"]))
 def get_link(bot, update):
     TRChatBase(update.from_user.id, update.text, "getlink")
-    if str(update.from_user.id)  in Config.BANNED_USERS:
+    if str(update.from_user.id) in Config.BANNED_USERS:
         bot.send_message(
             chat_id=update.chat.id,
             text=Translation.ABUSIVE_USERS,
@@ -61,6 +61,8 @@ def get_link(bot, update):
             progress_args=(Translation.DOWNLOAD_START, a.message_id, update.chat.id, c_time)
         )
         download_extension = after_download_file_name.rsplit(".", 1)[-1]
+        upload_name=after_download_file_name.rsplit("/",1)[-1]
+        upload_name=upload_name.replace(" ","_")
         bot.edit_message_text(
             text=Translation.SAVED_RECVD_DOC_FILE,
             chat_id=update.chat.id,
@@ -81,8 +83,8 @@ def get_link(bot, update):
             adfulurl = file_inance.webContentLink
             max_days = 0
         else:
-            url = "https://transfer.sh/{}.{}".format(str(update.from_user.id), str(download_extension))
-            max_days = "5"
+            url = "https://transfer.sh/{}".format(upload_name)
+            max_days = "7"
             command_to_exec = [
                 "curl",
                 # "-H", 'Max-Downloads: 1',
@@ -108,7 +110,7 @@ def get_link(bot, update):
                 return False
             else:
                 logger.info(t_response)
-                adfulurl = t_response.decode("UTF-8").split("\n")[-1].strip()
+                t_response_arry = t_response.decode("UTF-8").split("\n")[-1].strip()
                 shorten_api_url = "http://ouo.io/api/{}?s={}".format(Config.OUO_IO_API_KEY, t_response_arry)
                 adfulurl = requests.get(shorten_api_url).text
         bot.edit_message_text(

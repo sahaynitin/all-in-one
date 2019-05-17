@@ -5,8 +5,8 @@ Source Code: https://github.com/Thwarikh/FmDL_Bot
 <a href='https://t.me/FmDl_bot'>© FmDL_Bot</a>"""
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
-    UPGRADE_TEXT = "no one gonna help you 🤣🤣🤣🤣"
-   """ # UPGRADE_TEXT = @FmDL_Bot Paid Plans
+    #  UPGRADE_TEXT = "no one gonna help you 🤣🤣🤣🤣"
+    UPGRADE_TEXT = """ @FmDL_Bot Paid Plans
 -------
 Plan: FREE
 Filesize limit: 0 MB
@@ -21,7 +21,7 @@ Plan: A
 Filesize limit: UNLIMITED
 Daily limit: UNLIMITED
 Price 🇮🇳: ₹ 97/Month
-<a href="https://p-y.tm/Y-NCRdB">Pay Via PayTM</a>
+# <a href="https://p-y.tm/Y-NCRdB">Pay Via PayTM</a>
 FEATURES:
 👉 <a href="https://t.me/SpEcHlDe/608">All Supported Video Formats of https://rg3.github.io/youtube-dl/supportedsites.html, except HLS videos!</a>
 👉 <a href="https://t.me/SpEcHlDe/611">Get High Speed Direct Download Link of any Telegram file</a>
@@ -32,7 +32,7 @@ Plan: B
 Filesize limit: 1.5GB
 Daily limit: UNLIMITED
 Price 🇮🇳: ₹ 127/Month
-<a href="https://p-y.tm/i-h6RdB">Pay Via PayTM</a>
+# <a href="https://p-y.tm/i-h6RdB">Pay Via PayTM</a>
 FEATURES:
 👉 <a href="https://t.me/SpEcHlDe/608">All Supported Video Formats of https://rg3.github.io/youtube-dl/supportedsites.html!</a>
 👉 <a href="https://t.me/SpEcHlDe/611">Get High Speed Direct Download Link of any Telegram file</a>
@@ -45,7 +45,7 @@ Plan: C
 Filesize limit: 1.5GB
 Daily limit: UNLIMITED
 Price 🇮🇳: ₹ 314/Month
-<a href="https://p-y.tm/ub-p4Um">Pay Via PayTM</a>
+# <a href="https://p-y.tm/ub-p4Um">Pay Via PayTM</a>
 FEATURES:
 👉 <a href="https://t.me/SpEcHlDe/608">All Supported Video Formats of https://rg3.github.io/youtube-dl/supportedsites.html!</a>
 👉 <a href="https://t.me/SpEcHlDe/611">Get High Speed Direct Download Link of any Telegram file</a>
@@ -59,7 +59,7 @@ Plan: D
 Filesize limit: 1.5GB
 Daily limit: UNLIMITED
 Price 🇮🇳: ₹ 987/Month
-<a href="https://p-y.tm/WOF-alE">Pay Via PayTM</a>
+# <a href="https://p-y.tm/WOF-alE">Pay Via PayTM</a>
 FEATURES:
 👉 <a href="https://t.me/SpEcHlDe/608">All Supported Video Formats of https://rg3.github.io/youtube-dl/supportedsites.html!</a>
 👉 <a href="https://t.me/SpEcHlDe/611">Get High Speed Direct Download Link of any Telegram file</a>
@@ -73,8 +73,8 @@ FEATURES:
 👉 <a href="https://t.me/SpEcHlDe/657">Extract compressed Telegram media</a>
 👉 PLUS, all newly features that are going to be added in the feature*.
 -------
-NOTE: After payment you must take screenshot of receipt and send to anyone of the admins
-@thwarikh, or @ShriMADhaBot"""
+NOTE: After payment you must take screenshot of receipt and send to the admin
+@thwarikh """
     FORMAT_SELECTION = "Select the desired format: <a href='{}'>file size might be approximate</a> \nIf you want to set custom thumbnail, send photo before or quickly after tapping on any of the below buttons."
     SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:
 URL | filename | username | password"""

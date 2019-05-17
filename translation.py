@@ -6,7 +6,7 @@ Source Code: https://github.com/Thwarikh/FmDL_Bot
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
     UPGRADE_TEXT = "no one gonna help you 🤣🤣🤣🤣"
-    # UPGRADE_TEXT = """@FmDL_Bot Paid Plans
+   """ # UPGRADE_TEXT = @FmDL_Bot Paid Plans
 -------
 Plan: FREE
 Filesize limit: 0 MB

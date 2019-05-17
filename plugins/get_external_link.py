@@ -34,10 +34,10 @@ from pydrive.drive import GoogleDrive
 @pyrogram.Client.on_message(pyrogram.Filters.command(["getlink"]))
 def get_link(bot, update):
     TRChatBase(update.from_user.id, update.text, "getlink")
-    if str(update.from_user.id) not in Config.SUPER3X_DLBOT_USERS:
+    if str(update.from_user.id)  in Config.BANNED_USERS:
         bot.send_message(
             chat_id=update.chat.id,
-            text=Translation.NOT_AUTH_USER_TEXT,
+            text=Translation.ABUSIVE_USERS,
             reply_to_message_id=update.message_id,
             disable_web_page_preview=True,
             parse_mode=pyrogram.ParseMode.HTML
@@ -109,8 +109,8 @@ def get_link(bot, update):
             else:
                 logger.info(t_response)
                 adfulurl = t_response.decode("UTF-8").split("\n")[-1].strip()
-                #shorten_api_url = "http://ouo.io/api/{}?s={}".format(Config.OUO_IO_API_KEY, t_response_arry)
-                #adfulurl = requests.get(shorten_api_url).text
+                shorten_api_url = "http://ouo.io/api/{}?s={}".format(Config.OUO_IO_API_KEY, t_response_arry)
+                adfulurl = requests.get(shorten_api_url).text
         bot.edit_message_text(
             chat_id=update.chat.id,
             text=Translation.AFTER_GET_DL_LINK.format(adfulurl, max_days),

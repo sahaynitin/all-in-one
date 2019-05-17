@@ -34,10 +34,10 @@ from pydrive.drive import GoogleDrive
 @pyrogram.Client.on_message(pyrogram.Filters.command(["getlink"]))
 def get_link(bot, update):
     TRChatBase(update.from_user.id, update.text, "getlink")
-    if str(update.from_user.id) not in Config.BANNED_USERS:
+    if str(update.from_user.id) not in Config.SUPER3X_DLBOT_USERS:
         bot.send_message(
             chat_id=update.chat.id,
-            text=Translation.ABUSIVE_USERS,
+            text=Translation.NOT_AUTH_USER_TEXT,
             reply_to_message_id=update.message_id,
             disable_web_page_preview=True,
             parse_mode=pyrogram.ParseMode.HTML

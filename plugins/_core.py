@@ -463,7 +463,7 @@ def button(bot, update):
             except:
                 pass
             bot.edit_message_text(
-                text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG,
+                text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS,
                 chat_id=update.message.chat.id,
                 message_id=update.message.message_id,
                 disable_web_page_preview=True

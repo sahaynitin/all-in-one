@@ -81,7 +81,7 @@ def unzip(bot, update):
             )
             try:
                 command_to_exec = [
-                    "7z",
+                    "7za",
                     "e",
                     "-o" + extract_dir_path,
                     saved_file_path

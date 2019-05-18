@@ -5,76 +5,76 @@ Source Code: https://github.com/Thwarikh/FmDL_Bot
 © @FmDL_Bot"""
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
-    #  UPGRADE_TEXT = "no one gonna help you 🤣🤣🤣🤣"
-    UPGRADE_TEXT = """ @FmDL_Bot Paid Plans
--------
-Plan: FREE
-Filesize limit: 0 MB
-Daily limit: UNLIMITED
-Price 🇮🇳: ₹ 0/Month
-FEATURES:
-👉 <a href="#">All Supported Video Formats of https://rg3.github.io/youtube-dl/supportedsites.html, except HLS videos!</a>
-👉 <a href="#">Get High Speed Direct Download Link of any Telegram file</a>
-👉 <a href="#">Get a Telegram sticker as a Telegram downloadable media</a>
--------
-Plan: A
-Filesize limit: UNLIMITED
-Daily limit: UNLIMITED
-Price 🇮🇳: ₹ 97/Month
+    UPGRADE_TEXT = "no one gonna help you 🤣🤣🤣🤣"
+    #UPGRADE_TEXT = """ @FmDL_Bot Paid Plans
+#-------
+#Plan: FREE
+#Filesize limit: 0 MB
+#Daily limit: UNLIMITED
+#Price 🇮🇳: ₹ 0/Month
+#FEATURES:
+#👉 <a href="#">All Supported Video Formats of https://rg3.github.io/youtube-dl/supportedsites.html, except HLS videos!</a>
+#👉 <a href="#">Get High Speed Direct Download Link of any Telegram file</a>
+#👉 <a href="#">Get a Telegram sticker as a Telegram downloadable media</a>
+#-------
+#Plan: A
+#Filesize limit: UNLIMITED
+#Daily limit: UNLIMITED
+#Price 🇮🇳: ₹ 97/Month
 
-FEATURES:
-👉 <a href="#">All Supported Video Formats of https://rg3.github.io/youtube-dl/supportedsites.html, except HLS videos!</a>
-👉 <a href="#">Get High Speed Direct Download Link of any Telegram file</a>
-👉 <a href="#">Get a Telegram sticker as a Telegram downloadable media</a>
-👉 <a href="#">Upload as file from any HTTP link, with custom thumbnail support</a>
--------
-Plan: B
-Filesize limit: 1.5GB
-Daily limit: UNLIMITED
-Price 🇮🇳: ₹ 127/Month
+#FEATURES:
+#👉 <a href="#">All Supported Video Formats of https://rg3.github.io/youtube-dl/supportedsites.html, except HLS videos!</a>
+#👉 <a href="#">Get High Speed Direct Download Link of any Telegram file</a>
+#👉 <a href="#">Get a Telegram sticker as a Telegram downloadable media</a>
+#👉 <a href="#">Upload as file from any HTTP link, with custom thumbnail support</a>
+#-------
+#Plan: B
+#Filesize limit: 1.5GB
+#Daily limit: UNLIMITED
+#Price 🇮🇳: ₹ 127/Month
 
-FEATURES:
-👉 <a href="#">All Supported Video Formats of https://rg3.github.io/youtube-dl/supportedsites.html!</a>
-👉 <a href="#">Get High Speed Direct Download Link of any Telegram file</a>
-👉 <a href="#">Get a Telegram sticker as a Telegram downloadable media</a>
-👉 <a href="#">Upload as file from any HTTP link, with custom thumbnail support</a>
-👉 <a href="#">Convert To Streamable Video, any Telegram file</a>
-👉 <a href="#">Convert To Telegram Audio, the media sent as Telegram Documents</a>
--------
-Plan: C
-Filesize limit: 1.5GB
-Daily limit: UNLIMITED
-Price 🇮🇳: ₹ 314/Month
+#FEATURES:
+#👉 <a href="#">All Supported Video Formats of https://rg3.github.io/youtube-dl/supportedsites.html!</a>
+#👉 <a href="#">Get High Speed Direct Download Link of any Telegram file</a>
+#👉 <a href="#">Get a Telegram sticker as a Telegram downloadable media</a>
+#👉 <a href="#">Upload as file from any HTTP link, with custom thumbnail support</a>
+#👉 <a href="#">Convert To Streamable Video, any Telegram file</a>
+#👉 <a href="#">Convert To Telegram Audio, the media sent as Telegram Documents</a>
+#-------
+#Plan: C
+#Filesize limit: 1.5GB
+#Daily limit: UNLIMITED
+#Price 🇮🇳: ₹ 314/Month
 
-FEATURES:
-👉 <a href="#">All Supported Video Formats of https://rg3.github.io/youtube-dl/supportedsites.html!</a>
-👉 <a href="#">Get High Speed Direct Download Link of any Telegram file</a>
-👉 <a href="#">Get a Telegram sticker as a Telegram downloadable media</a>
-👉 <a href="#">Upload as file from any HTTP link, with custom thumbnail support</a>
-👉 <a href="#">Convert To Streamable Video, any Telegram file</a>
-👉 <a href="#t">Convert To Telegram Audio, the media sent as Telegram Documents</a>
-👉 <a href="#">ReName Telegram files, with custom thumbnail support</a>
--------
-Plan: D
-Filesize limit: 1.5GB
-Daily limit: UNLIMITED
-Price 🇮🇳: ₹ 987/Month
+#FEATURES:
+#👉 <a href="#">All Supported Video Formats of https://rg3.github.io/youtube-dl/supportedsites.html!</a>
+#👉 <a href="#">Get High Speed Direct Download Link of any Telegram file</a>
+#👉 <a href="#">Get a Telegram sticker as a Telegram downloadable media</a>
+#👉 <a href="#">Upload as file from any HTTP link, with custom thumbnail support</a>
+#👉 <a href="#">Convert To Streamable Video, any Telegram file</a>
+#👉 <a href="#t">Convert To Telegram Audio, the media sent as Telegram Documents</a>
+#👉 <a href="#">ReName Telegram files, with custom thumbnail support</a>
+#-------
+#Plan: D
+#Filesize limit: 1.5GB
+#Daily limit: UNLIMITED
+#Price 🇮🇳: ₹ 987/Month
 
-FEATURES:
-👉 <a href="#">All Supported Video Formats of https://rg3.github.io/youtube-dl/supportedsites.html!</a>
-👉 <a href="#">Get High Speed Direct Download Link of any Telegram file</a>
-👉 <a href="#">Get a Telegram sticker as a Telegram downloadable media</a>
-👉 <a href="#">Generate Custom Thumbnail by sending two photos in a Media Album</a>
-👉 <a href="#">Upload as file from any HTTP link, with custom thumbnail support</a>
-👉 <a href="#">Convert To Streamable Video, any Telegram file</a>
-👉 <a href="#">Convert To Telegram Audio, the media sent as Telegram Documents</a>
-👉 <a href="#">ReName Telegram files, with custom thumbnail support</a>
-👉 <a href="#">Trim large videos</a>, and <a href="#">Take Screenshots</a> of Telegram media files.
-👉 <a href="#">Extract compressed Telegram media</a>
-👉 PLUS, all newly features that are going to be added in the feature*.
--------
-NOTE: After payment you must take screenshot of receipt and send to the admin
-@thwarikh """
+#FEATURES:
+#👉 <a href="#">All Supported Video Formats of https://rg3.github.io/youtube-dl/supportedsites.html!</a>
+#👉 <a href="#">Get High Speed Direct Download Link of any Telegram file</a>
+#👉 <a href="#">Get a Telegram sticker as a Telegram downloadable media</a>
+#👉 <a href="#">Generate Custom Thumbnail by sending two photos in a Media Album</a>
+#👉 <a href="#">Upload as file from any HTTP link, with custom thumbnail support</a>
+#👉 <a href="#">Convert To Streamable Video, any Telegram file</a>
+#👉 <a href="#">Convert To Telegram Audio, the media sent as Telegram Documents</a>
+#👉 <a href="#">ReName Telegram files, with custom thumbnail support</a>
+#👉 <a href="#">Trim large videos</a>, and <a href="#">Take Screenshots</a> of Telegram media files.
+#👉 <a href="#">Extract compressed Telegram media</a>
+#👉 PLUS, all newly features that are going to be added in the feature*.
+#-------
+#NOTE: After payment you must take screenshot of receipt and send to the admin
+#@thwarikh """
     FORMAT_SELECTION = "Select the desired format: <a href='{}'>file size might be approximate</a> \nIf you want to set custom thumbnail, send photo before or quickly after tapping on any of the below buttons."
     SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:
 URL | filename | username | password"""
@@ -126,8 +126,8 @@ Send /me to know current plan details"""
     REPLY_TO_MEDIA_ALBUM_TO_GEN_THUMB = "Reply /generatecustomthumbnail to a media album, to generate custom thumbail"
     ERR_ONLY_TWO_MEDIA_IN_ALBUM = "Media Album should contain only two photos. Please re-send the media album, and then try again, or send only two photos in an album."
     INVALID_UPLOAD_BOT_URL_FORMAT = "URL format is incorrect. make sure your url starts with either http:// or https://. You can set custom file name using the format link | file_name.extension"
-    ABUSIVE_USERS = "You are not allowed to use this bot. If you think this is a mistake, please check /me to remove this restriction."
-    FF_MPEG_RO_BOT_AD_VER_TISE_MENT = "https://telegram.dog/FFMpegRoBot"
+    ABUSIVE_USERS = "You are not allowed to use this bot. If you think this is a mistake, please Contact @thwarikh to remove this restriction."
+    #FF_MPEG_RO_BOT_AD_VER_TISE_MENT = "https://telegram.dog/FFMpegRoBot"
     EXTRACT_ZIP_INTRO_ONE = "Send a compressed file first, Then reply /unzip command to the file."
     EXTRACT_ZIP_INTRO_THREE = "Analyzing received file. ⚠️ This might take some time. Please be patient. "
     UNZIP_SUPPORTED_EXTENSIONS = ("zip", "rar")

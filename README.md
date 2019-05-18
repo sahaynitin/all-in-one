@@ -2,6 +2,10 @@
 
 **There are multiple things I can do:**:
 
+**FEATURES**:  
+![​](https://telegra.ph/file/92da763236c0b6768073a.jpg)
+
+
 ### Installation
 
 #### Deploy to heroku using the button below.

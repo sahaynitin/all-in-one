@@ -64,7 +64,7 @@ def rename_doc(bot, update):
                 chat_id=update.chat.id,
                 message_id=a.message_id
             )
-            if "IndianMovie" in the_real_download_location:
+            if "Flowers_TV" in the_real_download_location:
                 bot.edit_message_text(
                     text=Translation.RENAME_403_ERR,
                     chat_id=update.chat.id,

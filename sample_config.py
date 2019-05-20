@@ -35,6 +35,10 @@ class Config(object):
     HTTP_PROXY = os.environ.get("HTTP_PROXY", "")
     # https://t.me/hevcbay/951
     OUO_IO_API_KEY = os.environ.get("OUO_IO_API_KEY", "")
+    #mirro
+    MIRROR_ACE_API_KEY = os.environ.get("MIRROR_ACE_API_KEY", "")
+    #mirror
+    MIRROR_ACE_API_TOKEN = os.environ.get("MIRROR_ACE_API_TOKEN", "")
     # for Google Custom Search Engine
     GCS_API_KEY = os.environ.get("GCS_API_KEY", None)
     GCS_SE_ID = os.environ.get("GCS_SE_ID", None)

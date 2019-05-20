@@ -84,7 +84,11 @@ def get_link(bot, update):
             max_days = 0
         else:
             url = "https://mirrorace.com/api/v1/file/upload/{}".format(upload_name)
-            max_days = "3"
+            step_one_auth_params = {
+            "api_key": Config.MIRROR_ACE_API_KEY,
+            "api_token": Config.MIRROR_ACE_API_TOKEN
+        }
+        max_days = "3"
             command_to_exec = [
                 "curl",
                 # "-H", 'Max-Downloads: 1',

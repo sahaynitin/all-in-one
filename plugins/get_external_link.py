@@ -83,10 +83,7 @@ def get_link(bot, update):
             adfulurl = file_inance.webContentLink
             max_days = 0
         else:
-            url = "https://mirrorace.com/api/v1/file/upload/{}".format(upload_name)
-            
-            api_key = Config.MIRROR_ACE_API_KEY,
-            api_token = Config.MIRROR_ACE_API_TOKEN
+            url = "https://transfer.sh{}".format(upload_name)
        
         max_days = "3"
             command_to_exec = [

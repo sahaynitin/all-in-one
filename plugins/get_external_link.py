@@ -84,8 +84,7 @@ def get_link(bot, update):
             max_days = 0
         else:
             url = "https://transfer.sh/{}".format(upload_name)
-       
-        max_days = "3"
+            max_days = "3"
             command_to_exec = [
                 "curl",
                 # "-H", 'Max-Downloads: 1',

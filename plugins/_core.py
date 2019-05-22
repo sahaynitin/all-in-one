@@ -212,7 +212,9 @@ def echo(bot, update):
                 str(update.from_user.id) + ".jpg",
                 Config.CHUNK_SIZE,
                 None,  # bot,
-                Translation.DOWNLOAD_START,
+               progress=progress_for_pyrogram,
+              progress_args=(
+                Translation.DOWNLOAD_START,update.message.message_id, update.message.chat.id, starts),
                 update.message_id,
                 update.chat.id
             )
@@ -289,11 +291,10 @@ def button(bot, update):
         )
         return
     bot.edit_message_text(
-        progress=progress_for_pyrogram,
-        progress_args=(Translation.DOWNLOAD_START, a.message_id, update.chat.id, c_time)
+        text=Translation.DOWNLOAD_START,
         chat_id=update.message.chat.id,
         message_id=update.message.message_id
-       )
+    )
         
     description = Translation.CUSTOM_CAPTION_UL_FILE
     if "fulltitle" in response_json:

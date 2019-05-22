@@ -290,10 +290,10 @@ def button(bot, update):
         return
     bot.edit_message_text(
         progress=progress_for_pyrogram,
-        progress_args=(Translation.DOWNLOAD_START, update.message.message_id, update.message.chat.id, starts)
+        progress_args=(Translation.DOWNLOAD_START, a.message_id, update.chat.id, c_time)
         chat_id=update.message.chat.id,
         message_id=update.message.message_id
-    )
+       )
         
     description = Translation.CUSTOM_CAPTION_UL_FILE
     if "fulltitle" in response_json:

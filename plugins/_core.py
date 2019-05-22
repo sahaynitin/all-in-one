@@ -293,6 +293,13 @@ def button(bot, update):
         chat_id=update.message.chat.id,
         message_id=update.message.message_id
     )
+        c_time = time.time()
+        after_download_file_name = bot.download_media(
+            message=reply_message,
+            file_name=download_location,
+            progress=progress_for_pyrogram,
+            progress_args=(Translation.DOWNLOAD_START, a.message_id, update.chat.id, c_time)
+    )
     description = Translation.CUSTOM_CAPTION_UL_FILE
     if "fulltitle" in response_json:
         description = response_json["fulltitle"][0:1021]

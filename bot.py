@@ -17,7 +17,7 @@ else:
     from config import Config
 
 import pyrogram
-logging.getLogger("pyrogram").setLevel(logging.WARNING)
+logging.getLogger("pyrogram").setLevel(logging.INFO)
 
 
 if __name__ == "__main__" :

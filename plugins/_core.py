@@ -211,13 +211,10 @@ def echo(bot, update):
                 Config.DOWNLOAD_LOCATION + "/" +
                 str(update.from_user.id) + ".jpg",
                 Config.CHUNK_SIZE,
-                None,  # bot,
-               progress=progress_for_pyrogram,
-               update.message_id,
-               update.chat.id
-              progress_args=(
-                Translation.DOWNLOAD_START,update.message.message_id, update.message.chat.id, starts),
-                
+               None,  # bot,
+                Translation.DOWNLOAD_START,
+                update.message_id,
+                update.chat.id
             )
             bot.send_message(
                 chat_id=update.chat.id,

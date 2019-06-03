@@ -4,7 +4,7 @@
 
 # the logging things
 import logging
-logging.basicConfig(level=logging.INFO,
+logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
@@ -25,7 +25,7 @@ else:
 from translation import Translation
 
 import pyrogram
-logging.getLogger("pyrogram").setLevel(logging.INFO)
+logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 from helper_funcs.chat_base import TRChatBase
 from helper_funcs.display_progress import progress_for_pyrogram, humanbytes
@@ -211,7 +211,7 @@ def echo(bot, update):
                 Config.DOWNLOAD_LOCATION + "/" +
                 str(update.from_user.id) + ".jpg",
                 Config.CHUNK_SIZE,
-               None,  # bot,
+                None,  # bot,
                 Translation.DOWNLOAD_START,
                 update.message_id,
                 update.chat.id
@@ -293,7 +293,6 @@ def button(bot, update):
         chat_id=update.message.chat.id,
         message_id=update.message.message_id
     )
-        
     description = Translation.CUSTOM_CAPTION_UL_FILE
     if "fulltitle" in response_json:
         description = response_json["fulltitle"][0:1021]
@@ -454,7 +453,7 @@ def button(bot, update):
                     reply_to_message_id=update.message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
                     progress_args=(
-                        Translation.UPLOAD_START, update.message.message_id, update.message.chat.id, starts)
+                        Translation.UPLOAD_START, update.message.message_id, update.message.chat.i, startsd)
                 )
             else:
                 logger.info("Did this happen? :\\")
@@ -464,7 +463,7 @@ def button(bot, update):
             except:
                 pass
             bot.edit_message_text(
-                text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS,
+                text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG,
                 chat_id=update.message.chat.id,
                 message_id=update.message.message_id,
                 disable_web_page_preview=True

@@ -20,14 +20,14 @@ else:
 
 # the Strings used for this "thing"
 from translation import Translation
-
+from pyrogram import filters
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 from helper_funcs.display_progress import progress_for_pyrogram, humanbytes
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["unzip"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["unzip"]))
 def unzip(bot, update):
     saved_file_path = Config.DOWNLOAD_LOCATION + \
         "/" + str(update.from_user.id) + ".unzip.zip"

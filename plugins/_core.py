@@ -409,21 +409,24 @@ def button(bot, update):
                         Translation.UPLOAD_START, update.message.message_id, update.message.chat.id, starts)
                 )
             elif tg_send_type == "video":
-                starts = time.time()
-                bot.send_video(
+                await update.message.reply_to_message.reply_chat_action("upload_video")
+                await bot.send_video(
                     chat_id=update.message.chat.id,
                     video=download_directory,
                     caption=description,
+                    parse_mode="HTML",
                     duration=duration,
                     width=width,
                     height=height,
                     supports_streaming=True,
-                    # reply_markup=reply_markup,
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')]]),
                     thumb=thumb_image_path,
                     reply_to_message_id=update.message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
                     progress_args=(
-                        Translation.UPLOAD_START, update.message.message_id, update.message.chat.id, starts)
+                        Translation.UPLOAD_START,
+                        update.message,
+                        start_time
                 )
             else:
                 logger.info("Did this happen? :\\")

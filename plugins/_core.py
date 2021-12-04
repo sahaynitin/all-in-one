@@ -428,7 +428,6 @@ def button(bot, update):
                         update.message,
                         start_time
                 )
-            else:
                 logger.info("Did this happen? :\\")
             try:
                 os.remove(download_directory)

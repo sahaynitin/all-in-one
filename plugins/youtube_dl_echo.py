@@ -34,21 +34,6 @@ from helper_funcs.help_uploadbot import DownLoadFile
 
 @pyrogram.Client.on_message(pyrogram.Filters.regex(pattern=".*http.*"))
 def echo(bot, update):
-    # logger.info(update)
-    TRChatBase(update.from_user.id, update.text, "/echo")
-    # bot.send_chat_action(
-    #     chat_id=update.chat.id,
-    #     action="typing"
-    # )
-    if str(update.from_user.id) in Config.BANNED_USERS:
-        bot.send_message(
-            chat_id=update.chat.id,
-            text=Translation.ABUSIVE_USERS,
-            reply_to_message_id=update.message_id,
-            disable_web_page_preview=True,
-            parse_mode=pyrogram.ParseMode.HTML
-        )
-        return
     logger.info(update.from_user)
     url = update.text
     youtube_dl_username = None
@@ -94,7 +79,7 @@ def echo(bot, update):
     try:
         if ("hotstar.com" in url) and (Config.HTTP_PROXY != ""):
             command_to_exec = [
-                "youtube-dl",
+                "yt-dlp",
                 "--no-warnings",
                 "--youtube-skip-dash-manifest",
                 "-j",
@@ -103,7 +88,7 @@ def echo(bot, update):
             ]
         else:
             command_to_exec = [
-                "youtube-dl",
+                "yt-dlp",
                 "--no-warnings",
                 "--youtube-skip-dash-manifest",
                 "-j",

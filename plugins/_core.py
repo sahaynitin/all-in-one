@@ -23,7 +23,7 @@ else:
 
 # the Strings used for this "thing"
 from translation import Translation
-
+from pyrogram.types import InlineKeyboardButton
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from helper_funcs.display_progress import progress_for_pyrogram, humanbytes
@@ -112,13 +112,13 @@ def echo(bot, update):
                         "file", format_id, format_ext)
                     if format_string is not None and not "audio only" in format_string:
                         ikeyboard = [
-                            pyrogram.InlineKeyboardButton(
+                            pyrogram.types.InlineKeyboardButton(
                                 "S" + format_ext + "Video [" + format_string +
                                 "] ( " +
                                 approx_file_size + " )",
                                 callback_data=(cb_string_video).encode("UTF-8")
                             ),
-                            pyrogram.InlineKeyboardButton(
+                            pyrogram.types.InlineKeyboardButton(
                                 "D" + format_ext  + "File [" + format_string +
                                 "] ( " +
                                 approx_file_size + " )",
@@ -129,7 +129,7 @@ def echo(bot, update):
                             cb_string_video_message = "{}|{}|{}".format(
                                 "vm", format_id, format_ext)
                             ikeyboard.append(
-                                pyrogram.InlineKeyboardButton(
+                                pyrogram.types.InlineKeyboardButton(
                                     "VMessage [" + format_string +
                                     "] ( " +
                                     approx_file_size + " )",
@@ -159,13 +159,13 @@ def echo(bot, update):
                     cb_string_128 = "{}|{}|{}".format("audio", "128k", "mp3")
                     cb_string = "{}|{}|{}".format("audio", "320k", "mp3")
                     inline_keyboard.append([
-                        pyrogram.InlineKeyboardButton(
+                        pyrogram.types.InlineKeyboardButton(
                             "MP3 " + "(" + "64 kbps" + ")", callback_data=cb_string_64.encode("UTF-8")),
-                        pyrogram.InlineKeyboardButton(
+                        pyrogram.types.InlineKeyboardButton(
                             "MP3 " + "(" + "128 kbps" + ")", callback_data=cb_string_128.encode("UTF-8"))
                     ])
                     inline_keyboard.append([
-                        pyrogram.InlineKeyboardButton(
+                        pyrogram.types.InlineKeyboardButton(
                             "MP3 " + "(" + "320 kbps" + ")", callback_data=cb_string.encode("UTF-8"))
                     ])
             else:
@@ -177,7 +177,7 @@ def echo(bot, update):
                 cb_string = "{}|{}|{}".format(
                     tg_send_type, format_id, format_ext)
                 inline_keyboard.append([
-                    pyrogram.InlineKeyboardButton(
+                    pyrogram.types.InlineKeyboardButton(
                         "unknown format", callback_data=cb_string.encode("UTF-8"))
                 ])
             reply_markup = pyrogram.types.InlineKeyboardMarkup(inline_keyboard)

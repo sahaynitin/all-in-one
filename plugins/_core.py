@@ -202,7 +202,7 @@ def echo(bot, update):
                 chat_id=update.chat.id,
                 text=Translation.FORMAT_SELECTION.format(thumbnail),
                 reply_markup=reply_markup,
-                parse_mode=pyrogram.ParseMode.HTML,
+                parse_mode=pyrogram.types.ParseMode.HTML,
                 reply_to_message_id=update.message_id
             )
     else:
@@ -222,7 +222,7 @@ def button(bot, update):
             text=Translation.ABUSIVE_USERS,
             message_id=update.message.message_id,
             disable_web_page_preview=True,
-            parse_mode=pyrogram.ParseMode.HTML
+            parse_mode=pyrogram.types.ParseMode.HTML
         )
         return
     cb_data = update.data.decode("UTF-8")

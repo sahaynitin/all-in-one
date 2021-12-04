@@ -213,7 +213,7 @@ def button(bot, update):
         command_to_exec = []
         if tg_send_type == "audio":
             command_to_exec = [
-                "youtube-dl",
+                "yt-dlp",
                 "-c",
                 "--prefer-ffmpeg",
                 "--extract-audio",
@@ -228,7 +228,7 @@ def button(bot, update):
             if "youtu" in youtube_dl_url:
                 minus_f_format = youtube_dl_format + "+bestaudio"
             command_to_exec = [
-                "youtube-dl",
+                "yt-dlp",
                 "-c",
                 "--embed-subs",
                 "-f", minus_f_format,

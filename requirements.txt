@@ -8,3 +8,4 @@ PyDrive
 pyrogram
 ffmpeg-python
 numpy
+TgCrypto

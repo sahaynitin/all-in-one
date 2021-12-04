@@ -215,11 +215,6 @@ def echo(bot, update):
 
 @pyrogram.Client.on_callback_query()
 def button(bot, update):
-    # logger.info(update)
-    if str(update.from_user.id) in Config.BANNED_USERS:
-        bot.edit_message_text(
-            chat_id=update.message.chat.id,
-            text=Translation.ABUSIVE_USERS,
             message_id=update.message.message_id,
             disable_web_page_preview=True,
             parse_mode="HTML"

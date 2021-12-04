@@ -33,7 +33,7 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 # https://stackoverflow.com/a/37631799/4723940
 from PIL import Image
-from pyrogram import filters, HTML
+from pyrogram import filters
 
 @pyrogram.Client.on_message(pyrogram.filters.regex(pattern=".*http.*"))
 def echo(bot, update):
@@ -202,7 +202,7 @@ def echo(bot, update):
                 chat_id=update.chat.id,
                 text=Translation.FORMAT_SELECTION.format(thumbnail),
                 reply_markup=reply_markup,
-                parse_mode=pyrogram.HTML,
+                parse_mode=HTML,
                 reply_to_message_id=update.message_id
             )
     else:
@@ -222,7 +222,7 @@ def button(bot, update):
             text=Translation.ABUSIVE_USERS,
             message_id=update.message.message_id,
             disable_web_page_preview=True,
-            parse_mode=pyrogram.types.ParseMode.HTML
+            parse_mode=HTML
         )
         return
     cb_data = update.data.decode("UTF-8")

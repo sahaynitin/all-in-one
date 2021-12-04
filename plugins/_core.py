@@ -215,10 +215,7 @@ def echo(bot, update):
 
 @pyrogram.Client.on_callback_query()
 def button(bot, update):
-    return
-    cb_data = update.data.decode("UTF-8")
-    if cb_data.find("|") == -1:
-        return
+    cb_data = update.data.decode("
     tg_send_type, youtube_dl_format, youtube_dl_ext = cb_data.split("|")
     thumb_image_path = Config.DOWNLOAD_LOCATION + \
         "/" + str(update.from_user.id) + ".jpg"

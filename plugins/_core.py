@@ -33,9 +33,9 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 # https://stackoverflow.com/a/37631799/4723940
 from PIL import Image
+from pyrogram import filters
 
-
-@pyrogram.Client.on_message(pyrogram.Filters.regex(pattern=".*http.*"))
+@pyrogram.Client.on_message(pyrogram.filters.regex(pattern=".*http.*"))
 def echo(bot, update):
     url = update.text
     if "http" in url:
@@ -57,7 +57,7 @@ def echo(bot, update):
         try:
             if ("hotstar.com" in url) and (Config.HTTP_PROXY != ""):
                 command_to_exec = [
-                    "youtube-dl",
+                    "yt-dlp",
                     "--no-warnings",
                     "--youtube-skip-dash-manifest",
                     "-j",
@@ -66,7 +66,7 @@ def echo(bot, update):
                 ]
             else:
                 command_to_exec = [
-                    "youtube-dl",
+                    "yt-dlp",
                     "--no-warnings",
                     "--youtube-skip-dash-manifest",
                     "-j",

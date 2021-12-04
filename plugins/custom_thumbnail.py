@@ -30,14 +30,6 @@ from helper_funcs.chat_base import TRChatBase
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["generatecustomthumbnail"]))
 def generate_custom_thumbnail(bot, update):
-    TRChatBase(update.from_user.id, update.text, "generatecustomthumbnail")
-    if str(update.from_user.id) not in Config.SUPER7X_DLBOT_USERS:
-        bot.send_message(
-            chat_id=update.chat.id,
-            text=Translation.NOT_AUTH_USER_TEXT,
-            reply_to_message_id=update.message_id
-        )
-        return
     if update.reply_to_message is not None:
         reply_message = update.reply_to_message
         if reply_message.media_group_id is not None:

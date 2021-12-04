@@ -22,7 +22,7 @@ from translation import Translation
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
-
+from pyrogram import filters
 
 from helper_funcs.display_progress import progress_for_pyrogram
 
@@ -32,7 +32,7 @@ from hachoir.parser import createParser
 from PIL import Image
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["rename"]))
 def rename_doc(bot, update):
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)

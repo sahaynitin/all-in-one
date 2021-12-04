@@ -26,8 +26,6 @@ from translation import Translation
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
-
-from helper_funcs.chat_base import TRChatBase
 from helper_funcs.display_progress import progress_for_pyrogram, humanbytes
 from helper_funcs.help_uploadbot import DownLoadFile, DetectFileSize
 
@@ -39,22 +37,6 @@ from PIL import Image
 
 @pyrogram.Client.on_message(pyrogram.Filters.regex(pattern=".*http.*"))
 def echo(bot, update):
-    # logger.info(update)
-    TRChatBase(update.from_user.id, update.text, "/echo")
-    # bot.send_chat_action(
-    #     chat_id=update.chat.id,
-    #     action="typing"
-    # )
-    logger.info(update.from_user)
-    if str(update.from_user.id) in Config.BANNED_USERS:
-        bot.send_message(
-            chat_id=update.chat.id,
-            text=Translation.ABUSIVE_USERS,
-            reply_to_message_id=update.message_id,
-            disable_web_page_preview=True,
-            parse_mode=pyrogram.ParseMode.HTML
-        )
-        return
     url = update.text
     if "http" in url:
         if "|" in url:
@@ -307,7 +289,7 @@ def button(bot, update):
     command_to_exec = []
     if tg_send_type == "audio":
         command_to_exec = [
-            "youtube-dl",
+            "yt-dlp",
             "-c",
             "--prefer-ffmpeg",
             "--extract-audio",
@@ -323,7 +305,7 @@ def button(bot, update):
         if "youtu" in youtube_dl_url:
             minus_f_format = youtube_dl_format + "+bestaudio"
         command_to_exec = [
-            "youtube-dl",
+            "yt-dlp",
             "-c",
             "--embed-subs",
             "-f", minus_f_format,

@@ -38,7 +38,7 @@ from PIL import Image
 
 @pyrogram.Client.on_callback_query()
 def button(bot, update):
-    cb_data = update.data.decode("UTF-8")
+    cb_data = update.data
     if ":" in cb_data:
         # unzip formats
         extract_dir_path = Config.DOWNLOAD_LOCATION + \

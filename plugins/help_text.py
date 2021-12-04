@@ -22,7 +22,7 @@ from translation import Translation
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
-
+from pyrogram import filters
 
 
 def GetExpiryDate(chat_id):
@@ -30,7 +30,7 @@ def GetExpiryDate(chat_id):
     return expires_at
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["help", "about"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["help", "about"]))
 def help_user(bot, update):
     bot.send_message(
         chat_id=update.chat.id,
@@ -41,7 +41,7 @@ def help_user(bot, update):
     )
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["me"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["me"]))
 def get_me_info(bot, update):
     chat_id = str(update.from_user.id)
     chat_id, plan_type, expires_at = GetExpiryDate(chat_id)
@@ -54,7 +54,7 @@ def get_me_info(bot, update):
     )
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["start"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["start"]))
 def start(bot, update):
     bot.send_message(
         chat_id=update.chat.id,
@@ -63,7 +63,7 @@ def start(bot, update):
     )
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["upgrade"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["upgrade"]))
 def upgrade(bot, update):
     bot.send_message(
         chat_id=update.chat.id,

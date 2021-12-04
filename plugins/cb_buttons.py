@@ -28,28 +28,16 @@ from translation import Translation
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
-
-from helper_funcs.chat_base import TRChatBase
 from helper_funcs.display_progress import progress_for_pyrogram, humanbytes
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 # https://stackoverflow.com/a/37631799/4723940
 from PIL import Image
-from pydrive.drive import GoogleDrive
+
 
 
 @pyrogram.Client.on_callback_query()
 def button(bot, update):
-    # logger.info(update)
-    if str(update.from_user.id) in Config.BANNED_USERS:
-        bot.edit_message_text(
-            chat_id=update.message.chat.id,
-            text=Translation.ABUSIVE_USERS,
-            message_id=update.message.message_id,
-            disable_web_page_preview=True,
-            parse_mode=pyrogram.ParseMode.HTML
-        )
-        return
     cb_data = update.data.decode("UTF-8")
     if ":" in cb_data:
         # unzip formats

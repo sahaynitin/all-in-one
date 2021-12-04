@@ -25,10 +25,9 @@ from translation import Translation
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-from helper_funcs.chat_base import TRChatBase
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["generatecustomthumbnail"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["generatecustomthumbnail"]))
 def generate_custom_thumbnail(bot, update):
     if update.reply_to_message is not None:
         reply_message = update.reply_to_message
@@ -78,16 +77,6 @@ def generate_custom_thumbnail(bot, update):
 
 @pyrogram.Client.on_message(pyrogram.Filters.photo)
 def save_photo(bot, update):
-    TRChatBase(update.from_user.id, update.text, "save_photo")
-    if str(update.from_user.id) in Config.BANNED_USERS:
-        bot.send_message(
-            chat_id=update.chat.id,
-            text=Translation.ABUSIVE_USERS,
-            reply_to_message_id=update.message_id,
-            disable_web_page_preview=True,
-            parse_mode=pyrogram.ParseMode.HTML
-        )
-        return
     if update.media_group_id is not None:
         if str(update.from_user.id) not in Config.SUPER7X_DLBOT_USERS:
             bot.send_message(
@@ -121,16 +110,6 @@ def save_photo(bot, update):
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["deletethumbnail"]))
 def delete_thumbnail(bot, update):
-    TRChatBase(update.from_user.id, update.text, "deletethumbnail")
-    if str(update.from_user.id) in Config.BANNED_USERS:
-        bot.send_message(
-            chat_id=update.chat.id,
-            text=Translation.ABUSIVE_USERS,
-            reply_to_message_id=update.message_id,
-            disable_web_page_preview=True,
-            parse_mode=pyrogram.ParseMode.HTML
-        )
-        return
     download_location = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id)
     try:
         os.remove(download_location + ".jpg")

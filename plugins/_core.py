@@ -427,8 +427,7 @@ def button(bot, update):
                         Translation.UPLOAD_START,
                         update.message,
                         start_time
-                )
-                logger.info("Did this happen? :\\")
+                )           
             try:
                 os.remove(download_directory)
                 os.remove(thumb_image_path)

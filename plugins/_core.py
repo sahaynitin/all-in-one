@@ -140,7 +140,7 @@ def echo(bot, update):
                     else:
                         # special weird case :\
                         ikeyboard = [
-                            pyrogram.InlineKeyboardButton(
+                            pyrogram.types.InlineKeyboardButton(
                                 "SVideo [" +
                                 "] ( " +
                                 approx_file_size + " )",
@@ -180,7 +180,7 @@ def echo(bot, update):
                     pyrogram.InlineKeyboardButton(
                         "unknown format", callback_data=cb_string.encode("UTF-8"))
                 ])
-            reply_markup = pyrogram.InlineKeyboardMarkup(inline_keyboard)
+            reply_markup = pyrogram.types.InlineKeyboardMarkup(inline_keyboard)
             # logger.info(reply_markup)
             thumbnail = Config.DEF_THUMB_NAIL_VID_S
             thumbnail_image = Config.DEF_THUMB_NAIL_VID_S
